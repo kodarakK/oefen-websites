@@ -1,6 +1,11 @@
 body {
   background-color:lightgoldenrodyellow
 }
+
+div {
+  color: green;
+}
+
 .bt1 {
   background-color: lightblue;
   border-color: blue;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Oefen Chemie!</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="shower">
+			<div>Bruto Formule: </div>
+			<p id="BrutoForm"></p>
+			<hr>
+			<p>Antwoord: </p>
+			<p id="answer"></p>
+		</div>
+			
+		<div>
+			<input type="text" placeholder="systematische naam" id="inputId">   
+	  	<button class = "bt2" type="button" onclick="check();">Check</button>
+			<button class = "bt2" type="button" onclick="showAnswer();">Antw</button>
+		</div>
+
+		<!-- links naar andere oefeningen -->
+	
+		<div>
+			<button class = "bt1">
+				<a class = trivl href="trivial.html">
+					<b>Triviale namen</b>
+				</a>
+			</button>
+		</div>
+		
+		<div>
+			<button class = bt1>
+				<a class = trivl href="reversetrivial.html">
+					<b>Omgekeerde triviale namen</b>
+				</a>
+			</button>
+		</div>
+	
+		<div>
+			<button class = bt1>
+				<a class = trivl href="omgekeerdebrutoformule.html">
+					<b>Omgekeerde systematische namen</b>
+				</a>
+			</button>
+		</div>
+	
+		<!-- the dark mode button -->
+		<div>
+			<button class = "btd" type="button" onclick="darkMode();">Dark Mode</button>
+		</div>
+		
+	<script>
+		const BrutoFormZuren2 = [
+			"HCl",
+			"HBrO" + '3'.sub(),
+			"H" + "2".sub() + "CO" + "3".sub(),
+			"HClO" + "3".sub(),
+			"H" + "3".sub() + "PO" + "4".sub(),
+			"HIO" + "3".sub(),
+			"HNO" + "3".sub(),
+			"H" + "2".sub() + "SO" + "4".sub(),
+		]
+		
+		const TrivialeNaam = [
+			"zoutzuur",
+			"broomzuur",
+			"koolzuur",
+			"chloorzuur",
+			"fosforzuur",
+			"joodzuur",
+			"salpeterzuur",
+			"zwavelzuur",
+		]
+		
+		function showForm(){
+			globalthis.x = Math.floor(Math.random() * BrutoFormZuren2.length);
+			document.getElementById("BrutoForm").innerHTML = BrutoFormZuren2[x];
+		}
+
+		function check(){
+			let input_value = document.getElementById("inputId").value;
+			if (input_value.ToLowerCase() == TrivialeNaam([globalthis.x])) {
+				alert("correct! ヾ(≧▽≦*)o");
+				showForm();
+			} else {
+				alert("incorrect! ≡(▔﹏▔)≡");
+			}
+		}
+	</script>
+			
+	</body>
+	
+</html>

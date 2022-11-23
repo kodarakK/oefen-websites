@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruto formule --> triviale naam</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <style>
+        body {
+            background-color: darkslategrey;
+
+        }
+
+        #shower {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid darkblue;
+            background-color: goldenrod;
+        }
+
+        .trivl {
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-decoration: none;
+        }
+
+        .bt1 {
+            border-color: green;
+            background-color: lightgreen;
+            width: 400px;
+
+        }
+
+        .bt1:hover {
+            background-color: green;
+            border-color: lightgreen;
+        }
+
+        .bt2 {
+            border-color: blue;
+            background-color: lightblue;
+        }
+
+        .bt2:hover {
+            border-color: lightblue;
+            background-color: blue;
+        }
+
+        .btd {
+            border-color: blue;
+            background-color: lightblue;
+            width: 100px;
+        }
+
+        .btd:hover {
+            border-color: lightblue;
+            background-color: blue;
+
+        }
+
+        div {
+            margin: 1%;
+        }
+
+        html {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <center id="shower">
+        <div id="header">
+            <p>Brutoformule: </p>
+            <p id="brutoformule"></p>
+            <hr>
+            <p>Antwoord: </p>
+            <div id="antwoord"></div>
+        </div>
+    </center>
+    <center>
+        <div>
+            <input type="text" placeholder="triviale naam" id="inputID">
+            <button onclick="check()" class="bt2">check</button>
+            <button onclick="toonAntwoord()" class="bt2">antwoord</button>
+        </div>
+
+        <div>
+            <p><a href="index1.html"><button class="bt1">Bruto formule naar systematische naam naam</button></a></p>
+            <p><a href="indexR.html"><button class="bt1">Systematische naam naar Bruto formule </button></a></p>
+            <p><a href="trivialR.html"><button class="bt1">Triviale naam naar bruto formule</button></a></p>
+        </div>
+    </center>
+	<!-- streak counter -->
+		<span>streak: </span>
+		<span id="score"></span>
+    <script>
+			var input = document.getElementById("inputID")
+        input.addEventListener("keydown", function (e) {
+            if (e.keyCode == 13){
+                check()
+            }
+        })
+			document.getElementById("score").innerHTML = score
+var score = -1
+
+        function goScore() {
+            score += 1
+            document.getElementById("score").innerHTML = score
+        }
+			
+        onload = (event) => {
+            showForm()
+        };
+
+        var x
+        const BrutoFormZuren2 = [
+            "HCl",
+            "HBrO" + '3'.sub(),
+            "H" + "2".sub() + "CO" + "3".sub(),
+            "HClO" + "3".sub(),
+            "H" + "3".sub() + "PO" + "4".sub(),
+            "HIO" + "3".sub(),
+            "HNO" + "3".sub(),
+            "H" + "2".sub() + "SO" + "4".sub(),
+        ]
+
+        const TrivialeNaam = [
+            "zoutzuur",
+            "broomzuur",
+            "koolzuur",
+            "chloorzuur",
+            "fosforzuur",
+            "joodzuur",
+            "salpeterzuur",
+            "zwavelzuur",
+        ]
+
+        function showForm() {
+            window.x = Math.floor(Math.random() * BrutoFormZuren2.length);
+            document.getElementById("brutoformule").innerHTML = BrutoFormZuren2[window.x];
+            goScore()
+        }
+
+        function check() {
+            let input_value = document.getElementById("inputId").value;
+            if (input_value.ToLowerCase() == TrivialeNaam[window.x]) {
+                alert("correct! ヾ(≧▽≦*)o");
+                showForm();
+            } else {
+                alert("incorrect! ≡(▔﹏▔)≡");
+								score = 0
+								document.getElementById("score").innerHTML = score
+            }
+        }
+    </script>
+</body>
+
+</html>

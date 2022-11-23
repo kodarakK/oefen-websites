@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(90deg,blue 10%, white 50%, red 100%);
+}
+#h1 {
+  color: darkred;
+}
+.bt1 {
+  background-color: lightblue;
+  border-color: blue;
+  width: 125px;
+}
+.bt1:hover {
+  background-color: blue;
+  border-color: lightblue;
+  width: 125px;
+}

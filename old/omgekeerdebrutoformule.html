@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systematische naam</title>
+    <style>
+        body {
+        background-color: darkslategrey;
+        
+        }
+        #shower {
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            border: 2px solid darkblue;
+        background-color: goldenrod;
+        }
+        .trivl {
+        color: black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-decoration: none;
+        }
+        .bt1 {
+        border-color: green;
+        background-color:lightgreen ;
+        width: 400px;
+        
+        }
+        .bt1:hover {
+        background-color: green;
+        border-color: lightgreen;
+        }
+        .bt2 {
+        border-color: blue;
+        background-color: lightblue;
+        }
+        .bt2:hover {
+        border-color: lightblue;
+        background-color: blue;
+        }
+        .btd {
+        border-color: blue;
+        background-color: lightblue;
+        width: 100px;
+        }
+        .btd:hover {
+        border-color: lightblue;
+        background-color: blue;
+        
+        }
+
+        div {
+            margin: 1%;
+        }
+
+        html {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <center id="shower">
+        <div id="header">
+            <p>Systematische Naam: </p>
+            <p id="systematische_naam"></p>
+            <hr>
+            <p>Antwoord: </p>
+            <div id="antwoord"></div>
+        </div>
+    </center>
+    <center>
+        <div>
+            <input type="text" placeholder="brutoformule" id="inputID">
+            <button onclick="check()" class="bt2">check</button>
+            <button onclick="toonAntwoord()" class="bt2">antwoord</button>
+        </div>
+
+        <div>
+            <a href="index.html"><button class="bt1">Bruto formule naar Systematische naam</button></a>
+        </div>
+    </center>
+
+
+    <script>
+        onload = (event) => {
+            showForm()
+        }
+
+        var x 
+
+        const BrutoFormZuren = [
+            "HBr",
+            "HCl",
+            "HF",
+            "HI",
+            "H2S",
+            "HBrO3",
+            "H2CO3",
+            "HClO3",
+            "H3PO4",
+            "HIO3",
+            "HNO3",
+            "H2SO4",
+            "Br-",
+            "Cl-",
+            "F-",
+            "I-",
+            "HS-",
+            "S2-",
+            "BrO3-",
+            "HCO3-",
+            "CO32-",
+            "ClO3-",
+            "H2PO4-",
+            "HPO42-",
+            "PO43-",	
+            "IO3-",
+            "NO3-",
+            "HSO2-",
+            "SO42-"
+        ]
+
+        const SystematischeNaam = [
+            "waterstofbromide",
+            "waterstofchloride",
+            "waterstoffluoride",
+            "waterstofjodide",
+            "waterstofsulfide",
+            "waterstofbromaat",
+            "waterstofcarbonaat",
+            "waterstofchloraat",
+            "waterstoffosfaat",
+            "waterstofjodaat",
+            "waterstofnitraat",
+            "waterstofsulfaat",
+            "bromide-ion",
+            "chloride-ion",
+            "fluoride-ion",
+            "jodide-ion",
+            "waterstofsulfide-ion",
+            "sulfide-ion",
+            "bromaation",
+            "waterstofcarbonaation",
+            "carbonaation",
+            "chloraation",
+            "diwaterstoffosfaation",
+            "waterstoffosfaation",
+            "fosfaation",
+            "jodaation",
+            "nitraation",
+            "waterstofsulfaation",
+            "sulfaation"
+        ]
+
+        function showForm() {
+            window.x = Math.floor(Math.random() * 28);
+            document.getElementById("systematische_naam").innerHTML = SystematischeNaam[x]
+            document.getElementById("antwoord").innerHTML = ""
+            document.getElementById("inputID").value = ""
+            console.log(x)
+        }
+
+        function check() {
+            let input_value = document.getElementById("inputID").value
+            if (input_value == BrutoFormZuren[x]) {
+                alert("correct! ☆*: .｡. o(≧▽≦)o .｡.:*☆")
+                showForm()
+            } else {
+                alert("incorrect! (´。＿。｀)")
+            }
+        }
+
+        function toonAntwoord() {
+            document.getElementById("antwoord").innerHTML = BrutoFormZuren[x]
+        }
+    </script>
+</body>
+</html>

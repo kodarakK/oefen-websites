@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frons</title>
+    <center>
+        <h1 id="h1">Frans Oefenen!!!</h1>
+    </center>
+    <link href="frans1.css" rel="stylesheet" type="text/css" />
+    <script src="frans1.js"></script>
+</head>
+
+<body>
+
+    <center>
+        <div>
+            <p>Frans: </p>
+            <p id="vraag"></p>
+            <hr>
+            <p>Antwoord:</p>
+            <p id="antwoord"></p>
+        </div>
+    </center>
+
+    <center>
+        <div>
+            <input type="text" placeholder="nederlands" id="inputID">
+            <button onclick="check()">check</button>
+            <button onclick="toonAntwoord()">antwoord</button>
+        </div>
+    </center>
+
+    <center>
+        <a href="../index.html"><button class="bt1"><b>Terug naar startpagina</b></button></a>
+    </center>
+
+    <script>
+			var input = document.getElementById("inputID")
+        input.addEventListener("keydown", function (e) {
+            if (e.keyCode == 13){
+                check()
+            }
+        })
+        onload = (event) => {
+            showWoord()
+        }
+        const Frans = [
+            "un administrateur",
+            "un bandeau",
+            "le boudoir",
+            "le butin",
+            "le cambrioleur",
+            "un carreau",
+            "les circonstances",
+            "un collier",
+            "une déclaration",
+            "un/une domestique",
+            "le domicile",
+            "une émeraude",
+            "les époux",
+            "un employeur",
+            "une ficelle",
+					  "une fouille",
+            "un foulard",
+            "le malfaiteur",
+            "une mallette",
+            "une mésaventure",
+            "un passant",
+            "une pelote",
+            "une perle",
+            "une précaution",
+            "un rubis",
+            "un trésor",
+            "armé(e)",
+            "astucieux(se)",
+            "brisé(e)",
+            "conjugal(e)",
+            "estival(e)",
+            "fâcheux(se)",
+            "grisonnant(e)",
+            "habitué(e) à",
+            "somptueux(se)",
+            "précipitamment",
+            "alerter",
+            "allonger",
+            "arracher",
+            "assaillir",
+            "bâillonner",
+            "balbutier",
+            "délivrer",
+            "désigner",
+            "dévaster",
+            "dissimuler",
+            "s'emparer de",
+            "s'introduire dans",
+            "ligoter",
+            "raccrocher",
+            "se rendre à",
+            "résider",
+            "avoir accès à",
+            "durant",
+            "de surcroît",
+            "mi-nez",
+            "porter plainte"
+        ]
+        const Ned = [
+            "een bestuurder/beheerder",
+            "een hoofdband",
+            "een boudoir",
+            "de buit",
+            "de inbreker",
+            "een ruit",
+            "de omstandigheden",
+            "een halsketting",
+            "een verklaring",
+            "een bediende",
+            "woning/woonplaats",
+            "een smaragd",
+            "de echtgenoten",
+            "een werkgever",
+            "een touwtje",
+            "een zoektocht/fouilleren",
+            "een sjaaltje",
+            "de misdadiger",
+            "een koffertje/aktetas",
+            "een tegenspoed",
+            "een voorbijganger",
+            "een kluwen",
+            "een parel",
+            "een voorzorgsmaatregel",
+            "een robijn",
+            "een schat",
+            "gewapend",
+            "sluw/slim/handig",
+            "gebroken",
+            "echtelijk",
+            "zomers",
+            "pijnlijk/jammer/jammerlijk",
+            "grijnzend",
+            "gewoon om",
+            "weelderigé",
+            "haastig",
+            "waarschuwen",
+            "uitstrekken",
+            "(uit)trekken/losrukken",
+            "bestoken met/aanvallen",
+            "knevelen",
+            "stamelen",
+            "bevrijden",
+            "tonen",
+            "verwoesten",
+            "verbergen",
+            "zich meester maken van",
+            "binnendringen",
+            "boeien/vastbinden",
+            "inhaken",
+            "rich begeven naar",
+            "verblijven",
+            "toegang hebben tot",
+            "tijdens",
+            "bovendien",
+            "halfweg de neus",
+            "klacht indienen"
+        ]
+
+        var x
+
+        function showWoord() {
+            window.x = Math.floor(Math.random() * Frans.length)
+            document.getElementById("vraag").innerHTML = Frans[window.x]
+            document.getElementById("antwoord").innerHTML = ""
+            document.getElementById("inputID").value = ""
+        }
+
+        function check() {
+            let input_value = document.getElementById("inputID").value
+            if (input_value == Ned[window.x]) {
+                alert("correct! ☆*: .｡. o(≧▽≦)o .｡.:*☆")
+                showWoord()
+            } else {
+                alert("incorrect! (´。＿。｀)")
+            }
+        }
+
+        function toonAntwoord() {
+            document.getElementById("antwoord").innerHTML = Ned[window.x]
+        }
+    </script>
+</body>
+
+</html>

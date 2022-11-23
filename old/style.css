@@ -1,0 +1,57 @@
+
+body {
+  background-color: lightcyan;
+}
+#shower {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+	border: 2px solid darkblue;
+  background-color: goldenrod;
+}
+.trivl {
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+}
+.bt1 {
+  border-color: green;
+  background-color:lightgreen ;
+  width: 400px;
+  
+}
+.bt1:hover {
+  background-color: green;
+  border-color: lightgreen;
+}
+.bt2 {
+  border-color: blue;
+  background-color: lightblue;
+}
+.bt2:hover {
+  border-color: lightblue;
+  background-color: blue;
+}
+.btd {
+  border-color: blue;
+  background-color: lightblue;
+  width: 100px;
+}
+.btd:hover {
+  border-color: lightblue;
+  background-color: blue;
+  
+}
+
+div {
+	margin: 1%;
+}
+
+html {
+	text-align: center;
+}
+
+.dark-mode {
+  background-color: darkslategray;
+}
+#img1 {
+  width: 400px;
+}

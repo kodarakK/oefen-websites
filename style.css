@@ -1,0 +1,13 @@
+body {
+  background-color:lightgoldenrodyellow
+}
+.bt1 {
+  background-color: lightblue;
+  border-color: blue;
+  width: 225px;
+}
+.bt1:hover {
+  background-color: blue;
+  border-color: lightblue;
+  width: 225px;
+}

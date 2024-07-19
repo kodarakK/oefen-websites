@@ -20,3 +20,8 @@ div {
   border-color: lightblue;
   width: 225px;
 }
+
+#siteHead {
+  display: flex;
+  align-content: center;
+}

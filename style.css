@@ -1,9 +1,15 @@
+:root {
+  --light-blue: #83a598;
+  --blue: #458588;
+}
+
 html {
   height: 100%;
 }
 
 body {
-  background-color:lightgoldenrodyellow
+  background-color: #282828;
+  font-size: 2em;
 }
 
 div {
@@ -11,18 +17,27 @@ div {
 }
 
 .bt1 {
-  background-color: lightblue;
-  border-color: blue;
-  width: 225px;
+  background-color: var(--light-blue);
+  border-color: var(--blue);
+  border-radius: 15px;
+    font-size: 1.5em;
+
 }
 .bt1:hover {
-  background-color: blue;
-  border-color: lightblue;
-  width: 225px;
+  background-color: var(--blue);
+  border-color: var(--light-blue);
 }
 
 #siteHead {
-  display: flex;
-  align-content: center;
-  align-items: center;
+	text-align: center;
+	color: #98971a;
+}
+
+#siteFlexBody {
+	margin: 0.5rem;
+	
+}
+
+#siteFlexBody > center {
+	margin: 0.5rem;
 }

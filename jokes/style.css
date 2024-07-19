@@ -1,0 +1,25 @@
+:root {
+	--bg: #282828;
+	--fg: #ebdbb2;
+}
+
+body {
+	background-color: var(--bg);
+}
+
+header {
+	color: var(--fg);
+	text-align: center;
+	font-size: 5em;
+}
+
+#jokes > div {
+	color: white;
+	margin: 2em;
+	font-size: 1.5em;
+}
+
+#jokeBtn {
+	font-size: 2em;
+	background-color: var(--fg);	
+}
